@@ -7,6 +7,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (colInfo.collider.tag == "Cube") {
             movement.enabled=false;
+            Debug.Log("Collided with: "+colInfo.collider.tag);
         }
     }
 }

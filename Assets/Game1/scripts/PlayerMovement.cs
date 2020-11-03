@@ -23,20 +23,20 @@ public class PlayerMovement : MonoBehaviour
         // Add a forward force
         if ( Input.GetKey("w") )
         {
-            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+            rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
         }
         if ( Input.GetKey("s") )
         {
-            rb.AddForce(0, 0, -forwardForce * Time.deltaTime);
+            rb.AddForce(0, 0, -forwardForce * Time.deltaTime, ForceMode.VelocityChange);
         }
         
         if ( Input.GetKey("d") )
         {
-            rb.AddForce(sideForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if ( Input.GetKey("a") )
         {
-            rb.AddForce(-sideForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
